@@ -1,8 +1,8 @@
-doors = [0]*101
+doors = [0]*100
 j = 1
 #Loop for increase steps
 while j <= 100:
-    i = 0
+    i = j - 1
     #Loop for check doors and close or open them (closed = 0, opened = 1)
     while i < len(doors):
         if doors[i] == 0:
@@ -12,9 +12,10 @@ while j <= 100:
         i += j
     j += 1
 
+print(doors)
 #Printing out the opened doors's numbers
 OpenedDoors = []
 for i in range(len(doors)):
     if doors[i] == 1:
-        OpenedDoors.append(i)
+        OpenedDoors.append(i+1)
 print(", ".join(map(str, OpenedDoors)))
