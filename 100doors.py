@@ -1,4 +1,4 @@
-doors = [0]*100
+doors = [0]*101
 j = 1
 #Loop for increase steps
 while j <= 100:
@@ -17,5 +17,4 @@ OpenedDoors = []
 for i in range(len(doors)):
     if doors[i] == 1:
         OpenedDoors.append(i)
-
 print(", ".join(map(str, OpenedDoors)))
